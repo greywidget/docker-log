@@ -6,7 +6,7 @@ This was a quick investigation to see how I could control rebuilding image
 layers. Remember of course that once one layer needs to be rebuild, all the 
 layers below that layer will also need rebuilding.
 
-In this example I wanted to rebuild the `RUN git clone...` and below it I had 
+In this example I wanted to rebuild the `RUN git clone...` and below if I had 
 changed the repo. To achieve that, I added the `ARG CACHEBUST` line above the 
 `RUN git clone...`. The value of CACHEBUST is defined in the `docker-compose.yml` file and to force a rebuild, the value needs to be changed. This will cause that layer and all subsequent layers to be rebuilt. 
 
