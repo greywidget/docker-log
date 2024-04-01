@@ -3,4 +3,4 @@ services:
     build:
       context: .
       args:
-        CACHEBUST: 3
+        CACHEBUST: 6
