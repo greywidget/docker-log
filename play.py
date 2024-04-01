@@ -15,7 +15,7 @@ logging.basicConfig(
 
 def main():
     log = logging.getLogger(__name__)
-    log.info(f"{datetime.now()} | Mr Pickel")
+    log.info(f"{datetime.now()} | This message is different")
 
 
 if __name__ == "__main__":
