@@ -1,13 +1,12 @@
 import logging
+import sys
 
 from datetime import datetime
-from pathlib import Path
 
-LOG_FILE = Path.cwd() / "notify.log"
 FMT = "%(asctime)s %(levelname)s %(message)s"
 logging.basicConfig(
-    filename=LOG_FILE.absolute(),
     level=logging.INFO,
+    stream=sys.stdout,
     format=FMT,
     datefmt="%Y-%m-%d %H:%M:%S",
 )

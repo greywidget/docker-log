@@ -11,6 +11,4 @@ WORKDIR /app
 ARG CACHEBUST
 RUN git clone --branch main --single-branch --depth 1 https://github.com/greywidget/docker-log.git .
 
-RUN ln -sf /dev/stdout /app/notify.log
-
 CMD ["python", "play.py"]
